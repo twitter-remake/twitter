@@ -41,10 +41,10 @@ const LoginMain = () => {
         icon="twitter"
         className="text-secondary-light-200 pb-4 w-14 h-14"
       />
-      <span className="font-twitter-chirp-extended font-black py-12 text-secondary-light-100 text-6xl">
+      <span className="font-twitter-chirp-extended font-black py-12 text-secondary-light text-6xl">
         Happening now
       </span>
-      <span className="font-twitter-chirp-extended font-black pb-6 text-secondary-light-100 text-3xl">
+      <span className="font-twitter-chirp-extended font-black pb-6 text-secondary-light text-3xl">
         Join Twitter today.
       </span>
 
@@ -62,7 +62,7 @@ const LoginMain = () => {
       </div>
 
       <Button className="w-[320px]">Create account</Button>
-      <span className="max-w-xs text-xs text-secondary-light-400">
+      <span className="max-w-xs text-[11px] leading-3 text-secondary-light-400">
         By signing up, you agree to the{' '}
         <span className="text-primary-blue cursor-pointer hover:underline">
           Terms of Service
@@ -78,7 +78,7 @@ const LoginMain = () => {
         .
       </span>
 
-      <span className="pt-12 pb-2 text-secondary-light-100 text-base font-semibold">
+      <span className="pt-12 pb-2 text-secondary-light-100 text-lg font-semibold">
         Already have an account?
       </span>
       <Button className="w-[320px]" variant="outline">
