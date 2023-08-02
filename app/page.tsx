@@ -11,21 +11,25 @@ export default function LoginPage() {
   return (
     <main className="grid grid-rows-[1fr,auto] bg-black min-h-screen">
       <div className="flex flex-col items-center lg:flex-row-reverse lg:items-stretch">
-        <section className="min-w-[45vw] flex bg-black items-center p-4">
+        <section className="min-w-[45vw] flex bg-black items-center p-2 md:p-4">
           <LoginMain />
         </section>
-        <section className="relative w-full min-h-[45vh] bg-blue flex justify-center items-center">
+        <section className="relative overflow-hidden w-full min-h-[45vh] bg-blue flex flex-shrink justify-center items-center">
           <Image
             src="/landing/whats_happening.png"
             priority
             fill
+            quality={100}
             sizes="100%"
             draggable={false}
             className="object-cover object-center"
             alt="Twitter banner"
           />
           <i className="absolute">
-            <IconComponent icon="twitter" className="text-[#fff] w-96 h-96" />
+            <IconComponent
+              icon="twitter"
+              className="text-[#fff] w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96"
+            />
           </i>
         </section>
       </div>
@@ -36,15 +40,15 @@ export default function LoginPage() {
 
 const LoginMain = () => {
   return (
-    <div className="flex flex-col p-5 space-y-2">
+    <div className="flex flex-col p-3 md:p-5 space-y-2">
       <IconComponent
         icon="twitter"
         className="text-secondary-light-200 pb-4 w-14 h-14"
       />
-      <span className="font-twitter-chirp-extended font-black py-12 text-secondary-light text-6xl">
+      <span className="font-twitter-chirp-extended font-black py-12 text-secondary-light text-4xl md:text-6xl">
         Happening now
       </span>
-      <span className="font-twitter-chirp-extended font-black pb-6 text-secondary-light text-3xl">
+      <span className="font-twitter-chirp-extended font-black pb-6 text-secondary-light text-2xl md:text-3xl">
         Join Twitter today.
       </span>
 
@@ -113,7 +117,7 @@ const LoginFooter = () => {
     <nav
       aria-label="footer"
       role="navigation"
-      className="flex flex-wrap items-baseline justify-center p-4 space-x-4"
+      className="w-full flex flex-wrap items-baseline justify-center p-4 space-x-4"
     >
       {links.map(({ href, label }) => (
         <a
