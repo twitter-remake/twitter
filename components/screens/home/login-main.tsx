@@ -7,7 +7,7 @@ export const LoginMain = () => {
     <section className="min-w-[45vw] flex bg-black items-center p-2 md:p-4">
       <div className="flex flex-col p-3 md:p-5 space-y-2">
         <Icon
-          icon="twitter"
+          name="twitter"
           className="text-secondary-light-200 pb-4 w-14 h-14"
         />
         <span className="font-twitter-chirp-extended font-black py-12 text-secondary-light text-4xl md:text-6xl">

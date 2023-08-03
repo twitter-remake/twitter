@@ -12,14 +12,14 @@ export const icons = {
   twitter: (props: SVGProps<SVGSVGElement>) => <IconTwitter {...props} />,
 }
 
-export type Icon = keyof typeof icons
+export type IconName = keyof typeof icons
 
 type IconComponentProps = ComponentProps<'svg'> & {
-  icon: Icon
+  name: IconName
 }
 
-const Icon: React.FC<IconComponentProps> = ({ icon, ...props }) => {
-  const Component = icons[icon]
+const Icon: React.FC<IconComponentProps> = ({ name, ...props }) => {
+  const Component = icons[name]
   const classes = cn('fill-current', props.className)
   return <Component className={classes} {...props} />
 }

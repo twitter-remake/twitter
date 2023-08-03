@@ -15,7 +15,7 @@ export const LoginBanner = () => (
     />
     <i className="absolute">
       <Icon
-        icon="twitter"
+        name="twitter"
         className="text-[#fff] w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96"
       />
     </i>

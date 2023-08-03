@@ -47,11 +47,11 @@ const DialogLoginFlowContentStep1 = ({
               role="button"
               tabIndex={0}
             >
-              <Icon icon="x" className="text-white w-5 h-5" />
+              <Icon name="x" className="text-white w-5 h-5" />
             </button>
           </Dialog.Close>
           <Icon
-            icon="twitter"
+            name="twitter"
             className="text-secondary-light-200 w-10 h-10 my-3"
           />
           <div></div>
@@ -136,11 +136,11 @@ const DialogLoginFlowContentStep2 = ({
               role="button"
               tabIndex={0}
             >
-              <Icon icon="x" className="text-white w-5 h-5" />
+              <Icon name="x" className="text-white w-5 h-5" />
             </button>
           </Dialog.Close>
           <Icon
-            icon="twitter"
+            name="twitter"
             className="text-secondary-light-200 w-10 h-10 my-3"
           />
           <div></div>

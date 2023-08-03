@@ -1,11 +1,11 @@
 import cn from 'clsx'
 import type { ComponentPropsWithRef } from 'react'
 import { forwardRef } from 'react'
-import Icon from '../icons'
+import Icon, { type IconName } from '../icons'
 
 type ButtonProps = ComponentPropsWithRef<'button'> & {
   variant?: 'primary' | 'secondary' | 'outline-primary' | 'outline-secondary'
-  icon?: Icon
+  icon?: IconName
   loading?: boolean
 }
 
@@ -32,7 +32,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {icon && (
           <span className="mr-2">
-            <Icon icon={icon} className="w-5 h-5" />
+            <Icon name={icon} className="w-5 h-5" />
           </span>
         )}
 
