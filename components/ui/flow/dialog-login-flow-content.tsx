@@ -1,5 +1,5 @@
 'use client'
-import IconComponent from '@/components/icons'
+import Icon from '@/components/icons'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useCallback, useState } from 'react'
 import { Button } from '../button'
@@ -47,10 +47,10 @@ const DialogLoginFlowContentStep1 = ({
               role="button"
               tabIndex={0}
             >
-              <IconComponent icon="x" className="text-white w-5 h-5" />
+              <Icon icon="x" className="text-white w-5 h-5" />
             </button>
           </Dialog.Close>
-          <IconComponent
+          <Icon
             icon="twitter"
             className="text-secondary-light-200 w-10 h-10 my-3"
           />
@@ -136,10 +136,10 @@ const DialogLoginFlowContentStep2 = ({
               role="button"
               tabIndex={0}
             >
-              <IconComponent icon="x" className="text-white w-5 h-5" />
+              <Icon icon="x" className="text-white w-5 h-5" />
             </button>
           </Dialog.Close>
-          <IconComponent
+          <Icon
             icon="twitter"
             className="text-secondary-light-200 w-10 h-10 my-3"
           />

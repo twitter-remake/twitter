@@ -1,4 +1,4 @@
-import IconComponent from '@/components/icons'
+import Icon from '@/components/icons'
 import { Button } from '@/components/ui/button'
 import { DialogLoginFlow } from '@/components/ui/flow/dialog-login-flow'
 
@@ -6,7 +6,7 @@ export const LoginMain = () => {
   return (
     <section className="min-w-[45vw] flex bg-black items-center p-2 md:p-4">
       <div className="flex flex-col p-3 md:p-5 space-y-2">
-        <IconComponent
+        <Icon
           icon="twitter"
           className="text-secondary-light-200 pb-4 w-14 h-14"
         />

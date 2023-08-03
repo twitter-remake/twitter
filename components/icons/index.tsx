@@ -18,13 +18,10 @@ type IconComponentProps = ComponentProps<'svg'> & {
   icon: Icon
 }
 
-export const IconComponent: React.FC<IconComponentProps> = ({
-  icon,
-  ...props
-}) => {
+const Icon: React.FC<IconComponentProps> = ({ icon, ...props }) => {
   const Component = icons[icon]
   const classes = cn('fill-current', props.className)
   return <Component className={classes} {...props} />
 }
 
-export default IconComponent
+export default Icon

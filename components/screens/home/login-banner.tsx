@@ -1,4 +1,4 @@
-import IconComponent from '@/components/icons'
+import Icon from '@/components/icons'
 import Image from 'next/image'
 
 export const LoginBanner = () => (
@@ -14,7 +14,7 @@ export const LoginBanner = () => (
       alt="Twitter banner"
     />
     <i className="absolute">
-      <IconComponent
+      <Icon
         icon="twitter"
         className="text-[#fff] w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96"
       />
