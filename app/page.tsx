@@ -52,10 +52,18 @@ const LoginMain = () => {
         Join Twitter today.
       </span>
 
-      <Button className="w-[320px]" variant="secondary" icon="google">
-        Sign up with Google
+      <Button
+        className="!bg-white hover:!bg-secondary-light-200 w-[320px]"
+        variant="secondary"
+        icon="google"
+      >
+        <span className="!font-medium">Sign up with Google</span>
       </Button>
-      <Button className="w-[320px]" variant="secondary" icon="github">
+      <Button
+        className="!bg-white hover:!bg-secondary-light-200 w-[320px]"
+        variant="secondary"
+        icon="github"
+      >
         Sign up with GitHub
       </Button>
 
