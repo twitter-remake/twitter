@@ -1,10 +1,10 @@
 import cn from 'clsx'
 import type { ComponentPropsWithRef } from 'react'
 import { forwardRef } from 'react'
-import IconComponent, { type Icon } from '../icons/icons'
+import IconComponent, { type Icon } from '../icons'
 
 type ButtonProps = ComponentPropsWithRef<'button'> & {
-  variant?: 'primary' | 'secondary' | 'outline'
+  variant?: 'primary' | 'secondary' | 'outline-primary' | 'outline-secondary'
   icon?: Icon
   loading?: boolean
 }
@@ -19,13 +19,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         className={cn(
           className,
-          'flex items-center justify-center w-72 min-w-[32px] max-w-xs min-h-[32px] p-2 rounded-full transition-colors duration-150',
+          'flex items-center justify-center w-72 min-w-[32px] min-h-[32px] p-2 rounded-full transition-colors duration-150',
           {
             'bg-secondary-light hover:bg-secondary-light-200':
               variant === 'secondary',
             'bg-primary-blue hover:bg-primary-dark-blue': variant === 'primary',
             'bg-transparent border border-secondary-light-400 hover:bg-primary-blue hover:bg-opacity-10':
-              variant === 'outline',
+              variant === 'outline-primary' || variant === 'outline-secondary',
           }
         )}
         {...props}
@@ -39,8 +39,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         <span
           className={cn('font-bold', {
             'text-secondary-black': variant === 'secondary',
-            'text-secondary-white': variant === 'primary',
-            'text-primary-blue': variant === 'outline',
+            'text-secondary-white':
+              variant === 'primary' || variant === 'outline-secondary',
+            'text-primary-blue': variant === 'outline-primary',
           })}
         >
           {children}

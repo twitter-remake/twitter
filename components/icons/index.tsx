@@ -3,12 +3,10 @@ import { type ComponentProps, type SVGProps } from 'react'
 import IconGitHub from './IconGitHub'
 import IconGoogle from './IconGoogle'
 import IconTwitter from './IconTwitter'
+import IconX from './IconX'
 
-type Icons = {
-  [key: string]: (props: SVGProps<SVGSVGElement>) => JSX.Element
-}
-
-export const icons: Icons = {
+export const icons = {
+  x: (props: SVGProps<SVGSVGElement>) => <IconX {...props} />,
   google: (props: SVGProps<SVGSVGElement>) => <IconGoogle {...props} />,
   github: (props: SVGProps<SVGSVGElement>) => <IconGitHub {...props} />,
   twitter: (props: SVGProps<SVGSVGElement>) => <IconTwitter {...props} />,

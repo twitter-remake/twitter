@@ -11,6 +11,9 @@ module.exports = {
         'twitter-chirp': ['TwitterChirp', 'sans-serif'],
         'twitter-chirp-extended': ['TwitterChirpExtendedHeavy', 'sans-serif'],
       },
+      backgroundColor: {
+        'dialog-overlay': 'rgba(91, 112, 131, 0.4)',
+      },
       colors: {
         'primary-blue': '#1D9BF0',
         'primary-dark-blue': '#2795D9',
