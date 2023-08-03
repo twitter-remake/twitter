@@ -1,9 +1,9 @@
 import cn from 'clsx'
 import { type ComponentProps, type SVGProps } from 'react'
-import IconGitHub from './IconGitHub'
-import IconGoogle from './IconGoogle'
-import IconTwitter from './IconTwitter'
-import IconX from './IconX'
+import IconGitHub from './icon-github'
+import IconGoogle from './icon-google'
+import IconTwitter from './icon-twitter'
+import IconX from './icon-x'
 
 export const icons = {
   x: (props: SVGProps<SVGSVGElement>) => <IconX {...props} />,
