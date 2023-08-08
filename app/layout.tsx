@@ -17,13 +17,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  dialog,
 }: {
   children: React.ReactNode
+  dialog: React.ReactNode
 }) {
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      <body>{children}</body>
+      <body className="bg-black">
+        {children}
+        {dialog}
+      </body>
     </html>
   )
 }

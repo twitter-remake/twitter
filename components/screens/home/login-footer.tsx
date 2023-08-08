@@ -45,6 +45,7 @@ export const LoginFooter = () => {
     >
       {links.map(({ href, label }) => (
         <a
+          key={`${href}${label}`}
           rel="noopener noreferrer nofollow"
           target="_blank"
           role="link"

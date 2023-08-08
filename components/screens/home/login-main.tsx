@@ -1,6 +1,7 @@
+import { AuthProviderButton } from '@/components/auth/AuthProviderButton'
 import Icon from '@/components/icons'
 import { Button } from '@/components/ui/button'
-import { DialogLoginFlow } from '@/components/ui/flow/dialog-login-flow'
+import Link from 'next/link'
 
 export const LoginMain = () => {
   return (
@@ -17,20 +18,8 @@ export const LoginMain = () => {
           Join Twitter today.
         </span>
 
-        <Button
-          className="!bg-white hover:!bg-secondary-light-200 w-[320px]"
-          variant="secondary"
-          icon="google"
-        >
-          <span className="!font-medium">Sign up with Google</span>
-        </Button>
-        <Button
-          className="!bg-white hover:!bg-secondary-light-200 w-[320px]"
-          variant="secondary"
-          icon="github"
-        >
-          Sign up with GitHub
-        </Button>
+        <AuthProviderButton provider="google" variant="signup" />
+        <AuthProviderButton provider="github" variant="signup" />
 
         <div className="max-w-xs flex items-center justify-between space-x-4">
           <div className="w-full h-[1px] bg-secondary-light-400 bg-opacity-50"></div>
@@ -58,7 +47,11 @@ export const LoginMain = () => {
         <span className="pt-12 pb-2 text-secondary-light-100 text-lg font-semibold">
           Already have an account?
         </span>
-        <DialogLoginFlow />
+        <Link href="/i/flow/signin">
+          <Button className="w-[320px]" variant="outline-primary">
+            Sign in
+          </Button>
+        </Link>
       </div>
     </section>
   )

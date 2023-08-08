@@ -1,4 +1,5 @@
 'use client'
+import { AuthProviderButton } from '@/components/auth/AuthProviderButton'
 import Icon from '@/components/icons'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useCallback, useState } from 'react'
@@ -61,20 +62,12 @@ const DialogLoginFlowContentStep1 = ({
         <div className="flex flex-col">
           <span className="font-bold text-4xl mb-6">Sign in to Twitter</span>
 
-          <Button
-            className="!bg-white hover:!bg-secondary-light-200 my-3 w-[320px]"
-            variant="secondary"
-            icon="google"
-          >
-            <span className="!font-normal">Sign in with Google</span>
-          </Button>
-          <Button
-            className="!bg-white hover:!bg-secondary-light-200 my-3 w-[320px]"
-            variant="secondary"
-            icon="github"
-          >
-            Sign in with GitHub
-          </Button>
+          <div className="my-3">
+            <AuthProviderButton variant="signin" provider="google" />
+          </div>
+          <div className="my-3">
+            <AuthProviderButton variant="signin" provider="github" />
+          </div>
 
           <div className="min-w-[320px] max-w-[320px] flex items-center justify-between mb-3 space-x-2">
             <div className="w-full h-[1px] bg-secondary-light-400 bg-opacity-50"></div>
