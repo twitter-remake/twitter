@@ -1,6 +1,6 @@
 'use client'
 import DialogLoginFlow from '@/components/ui/flow/dialog-login-flow'
-import { notFound } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 type AuthFlowDialogParams = {
@@ -12,6 +12,7 @@ type AuthFlowDialogProps = {
 }
 
 export default function AuthFlowDialog({ params }: AuthFlowDialogProps) {
+  const router = useRouter()
   const [mounted, setMounted] = useState(false)
   useEffect(() => {
     setMounted(true)
@@ -23,5 +24,5 @@ export default function AuthFlowDialog({ params }: AuthFlowDialogProps) {
     return <DialogLoginFlow open />
   }
 
-  notFound()
+  router.push('/')
 }
