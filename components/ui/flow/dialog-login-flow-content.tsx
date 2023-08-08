@@ -5,6 +5,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { useCallback, useState } from 'react'
 import { Button } from '../button'
 import { Input } from '../input'
+import Tooltip from '../tooltip'
 
 type DialogLoginFlowContentProps = {
   loading?: boolean
@@ -41,16 +42,18 @@ const DialogLoginFlowContentStep1 = ({
     <>
       <Dialog.Title asChild>
         <div className="flex items-center justify-between px-4">
-          <Dialog.Close asChild>
-            <button
-              className="rounded-full focus:ring-secondary-white hover:bg-secondary-light hover:bg-opacity-10 focus:bg-secondary-light focus:bg-opacity-20 transition-colors duration-150"
-              aria-label="Close"
-              role="button"
-              tabIndex={0}
-            >
-              <Icon name="x" className="text-white w-5 h-5" />
-            </button>
-          </Dialog.Close>
+          <Tooltip content="Close">
+            <Dialog.Close asChild>
+              <button
+                className="rounded-full focus:ring-secondary-white hover:bg-secondary-light hover:bg-opacity-10 focus:bg-secondary-light focus:bg-opacity-20 transition-colors duration-150"
+                aria-label="Close"
+                role="button"
+                tabIndex={0}
+              >
+                <Icon name="x" className="text-white w-5 h-5" />
+              </button>
+            </Dialog.Close>
+          </Tooltip>
           <Icon
             name="twitter"
             className="text-secondary-light-200 w-10 h-10 my-3"
@@ -123,14 +126,16 @@ const DialogLoginFlowContentStep2 = ({
       <Dialog.Title asChild>
         <div className="flex items-center justify-between px-4">
           <Dialog.Close asChild>
-            <button
-              className="rounded-full focus:ring-secondary-white hover:bg-secondary-light hover:bg-opacity-10 focus:bg-secondary-light focus:bg-opacity-20 transition-colors duration-150"
-              aria-label="Close"
-              role="button"
-              tabIndex={0}
-            >
-              <Icon name="x" className="text-white w-5 h-5" />
-            </button>
+            <Tooltip content="close">
+              <button
+                className="rounded-full focus:ring-secondary-white hover:bg-secondary-light hover:bg-opacity-10 focus:bg-secondary-light focus:bg-opacity-20 transition-colors duration-150"
+                aria-label="Close"
+                role="button"
+                tabIndex={0}
+              >
+                <Icon name="x" className="text-white w-5 h-5" />
+              </button>
+            </Tooltip>
           </Dialog.Close>
           <Icon
             name="twitter"
