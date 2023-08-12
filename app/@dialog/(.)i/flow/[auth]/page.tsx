@@ -1,6 +1,6 @@
 'use client'
-import DialogLoginFlow from '@/components/ui/flow/dialog-login-flow'
-import DialogSignUpFlow from '@/components/ui/flow/signup/dialog-signup-flow'
+import DialogLoginFlow from '@/components/auth/flow/signin/dialog-login-flow'
+import DialogSignUpFlow from '@/components/auth/flow/signup/dialog-signup-flow'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 

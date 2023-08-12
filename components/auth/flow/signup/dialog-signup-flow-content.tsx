@@ -1,8 +1,8 @@
 'use client'
 import Icon from '@/components/icons'
+import Tooltip from '@/components/ui/tooltip'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useState } from 'react'
-import Tooltip from '../../tooltip'
 import { DialogSignUpFlowContentSteps } from './dialog-signup-flow-content-steps'
 
 type DialogSignUpFlowContentProps = {

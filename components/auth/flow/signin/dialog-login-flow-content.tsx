@@ -1,11 +1,11 @@
 'use client'
 import { AuthProviderButton } from '@/components/auth/AuthProviderButton'
 import Icon from '@/components/icons'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import Tooltip from '@/components/ui/tooltip'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useCallback, useState } from 'react'
-import { Button } from '../button'
-import { Input } from '../input'
-import Tooltip from '../tooltip'
 
 type DialogLoginFlowContentProps = {
   loading?: boolean

@@ -1,8 +1,8 @@
 'use client'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useState } from 'react'
-import { Button } from '../../button'
-import { Input } from '../../input'
 import { SelectDateOfBirth } from './select-date-of-birth'
 
 type DialogSignUpFlowContentStepsProps = {

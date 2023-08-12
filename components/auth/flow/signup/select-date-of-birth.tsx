@@ -1,7 +1,7 @@
 'use client'
+import { Select, SelectItem } from '@/components/ui/select'
 import { getLeapYearsBetween, getMaxDaysInMonth } from '@/lib/date'
 import { useMemo, useState } from 'react'
-import { Select, SelectItem } from '../../select'
 
 const months = [
   { value: '1', label: 'January' },
