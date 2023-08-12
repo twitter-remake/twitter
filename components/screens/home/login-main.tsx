@@ -1,4 +1,4 @@
-import { AuthProviderButton } from '@/components/auth/AuthProviderButton'
+import { AuthProviderButton } from '@/components/auth/auth-provider-button'
 import Icon from '@/components/icons'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
