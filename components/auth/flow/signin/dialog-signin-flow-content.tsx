@@ -7,13 +7,13 @@ import Tooltip from '@/components/ui/tooltip'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useCallback, useState } from 'react'
 
-type DialogLoginFlowContentProps = {
+type DialogSignInFlowContentProps = {
   loading?: boolean
 }
 
-export const DialogLoginFlowContent = ({
+export const DialogSignInFlowContent = ({
   loading = false,
-}: DialogLoginFlowContentProps) => {
+}: DialogSignInFlowContentProps) => {
   const [currentStep, setCurrentStep] = useState(0)
   const [login, setLogin] = useState('')
 
@@ -23,19 +23,19 @@ export const DialogLoginFlowContent = ({
   }, [])
 
   if (currentStep === 0) {
-    return <DialogLoginFlowContentStep1 nextAction={handleNextAction} />
+    return <DialogSignInFlowContentStep1 nextAction={handleNextAction} />
   } else if (login && currentStep === 1) {
-    return <DialogLoginFlowContentStep2 login={login} />
+    return <DialogSignInFlowContentStep2 login={login} />
   }
 }
 
-type DialogLoginFlowContentStep1Props = {
+type DialogSignInFlowContentStep1Props = {
   nextAction: (value: string) => void
 }
 
-const DialogLoginFlowContentStep1 = ({
+const DialogSignInFlowContentStep1 = ({
   nextAction,
-}: DialogLoginFlowContentStep1Props) => {
+}: DialogSignInFlowContentStep1Props) => {
   const [login, setLogin] = useState('')
 
   return (
@@ -112,13 +112,13 @@ const DialogLoginFlowContentStep1 = ({
   )
 }
 
-type DialogLoginFlowContentStep2Props = {
+type DialogSignInFlowContentStep2Props = {
   login: string
 }
 
-const DialogLoginFlowContentStep2 = ({
+const DialogSignInFlowContentStep2 = ({
   login,
-}: DialogLoginFlowContentStep2Props) => {
+}: DialogSignInFlowContentStep2Props) => {
   const [password, setPassword] = useState('')
 
   return (
@@ -185,4 +185,4 @@ const DialogLoginFlowContentStep2 = ({
   )
 }
 
-export default DialogLoginFlowContent
+export default DialogSignInFlowContent

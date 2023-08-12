@@ -1,5 +1,5 @@
 'use client'
-import DialogLoginFlow from '@/components/auth/flow/signin/dialog-login-flow'
+import DialogSignInFlow from '@/components/auth/flow/signin/dialog-signin-flow'
 import DialogSignUpFlow from '@/components/auth/flow/signup/dialog-signup-flow'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -22,7 +22,7 @@ export default function AuthFlowDialog({ params }: AuthFlowDialogProps) {
   if (!mounted) return <></>
 
   if (params.auth === 'signin') {
-    return <DialogLoginFlow open />
+    return <DialogSignInFlow open />
   }
 
   if (params.auth === 'signup') {

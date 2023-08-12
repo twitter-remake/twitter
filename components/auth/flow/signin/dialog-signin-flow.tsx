@@ -1,17 +1,17 @@
 'use client'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useRouter } from 'next/navigation'
-import DialogLoginFlowContent from './dialog-login-flow-content'
+import DialogSignInFlowContent from './dialog-signin-flow-content'
 
-type DialogLoginFlowProps = {
+type DialogSignInFlowProps = {
   children?: React.ReactNode
   open?: boolean
 }
 
-export const DialogLoginFlow = ({
+export const DialogSignInFlow = ({
   children,
   open = false,
-}: DialogLoginFlowProps) => {
+}: DialogSignInFlowProps) => {
   const router = useRouter()
   const handleOnOpenChange = (open: boolean) => {
     if (!open) {
@@ -25,11 +25,11 @@ export const DialogLoginFlow = ({
       <Dialog.Portal>
         <Dialog.Overlay className="bg-dialog-overlay fixed inset-0" />
         <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[600px] max-w-[80vw] min-h-[400px] h-[650px] max-h-[90vh] bg-black rounded-2xl">
-          <DialogLoginFlowContent />
+          <DialogSignInFlowContent />
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
   )
 }
 
-export default DialogLoginFlow
+export default DialogSignInFlow
