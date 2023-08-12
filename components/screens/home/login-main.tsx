@@ -27,7 +27,9 @@ export const LoginMain = () => {
           <div className="w-full h-[1px] bg-secondary-light-400 bg-opacity-50"></div>
         </div>
 
-        <Button className="w-[320px]">Create account</Button>
+        <Link href="/i/flow/signup">
+          <Button className="w-[320px]">Create account</Button>
+        </Link>
         <span className="max-w-xs text-[11px] leading-3 text-secondary-light-400">
           By signing up, you agree to the{' '}
           <span className="text-primary-blue cursor-pointer hover:underline">

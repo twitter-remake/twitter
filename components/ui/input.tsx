@@ -1,27 +1,32 @@
 import * as Label from '@radix-ui/react-label'
-import cn from 'clsx'
 import { HTMLInputTypeAttribute, useState } from 'react'
+import cn from '../../lib/cn'
 
 type InputProps = {
   name: string
   className?: string
   placeholder?: string
+  maxLength?: number
   type?: HTMLInputTypeAttribute
   value?: string
   disabled?: boolean
   onChange?: (value: string) => void
+  tabIndex?: number
 }
 
 export const Input = ({
   name,
   className,
   placeholder,
+  maxLength,
   type = 'text',
   value,
   disabled = false,
   onChange,
+  tabIndex = 0,
 }: InputProps) => {
   const [focused, setFocused] = useState(false)
+  const [length, setLength] = useState(0)
   const [filled, setFilled] = useState(false)
 
   return (
@@ -42,6 +47,13 @@ export const Input = ({
           {placeholder}
         </span>
       </div>
+      {focused && maxLength && (
+        <div className="absolute -top-3 right-0 z-10 w-full h-full px-2 flex items-center justify-end">
+          <span className="text-sm text-secondary-light-400">
+            {length} / {maxLength}
+          </span>
+        </div>
+      )}
       <div
         className={cn('relative h-full px-2 z-20 rounded', [
           disabled && 'bg-secondary-black bg-opacity-60',
@@ -60,16 +72,19 @@ export const Input = ({
           type={type}
           value={value}
           disabled={disabled}
+          maxLength={maxLength}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           onChange={(e) => {
             setFilled(e.target.value.length > 0)
+            setLength(e.target.value.length)
             onChange?.(e.target.value)
           }}
           dir="auto"
           autoCapitalize="sentences"
           autoComplete={name}
           spellCheck={true}
+          tabIndex={tabIndex}
         />
       </div>
     </Label.Root>

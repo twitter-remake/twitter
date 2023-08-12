@@ -1,5 +1,6 @@
-import cn from 'clsx'
 import { type ComponentProps, type SVGProps } from 'react'
+import cn from '../../lib/cn'
+import IconChevronDown from './icon-chevron-down'
 import IconGitHub from './icon-github'
 import IconGoogle from './icon-google'
 import IconTwitter from './icon-twitter'
@@ -10,6 +11,9 @@ export const icons = {
   google: (props: SVGProps<SVGSVGElement>) => <IconGoogle {...props} />,
   github: (props: SVGProps<SVGSVGElement>) => <IconGitHub {...props} />,
   twitter: (props: SVGProps<SVGSVGElement>) => <IconTwitter {...props} />,
+  'chevron-down': (props: SVGProps<SVGSVGElement>) => (
+    <IconChevronDown {...props} />
+  ),
 }
 
 export type IconName = keyof typeof icons
