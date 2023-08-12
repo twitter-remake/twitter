@@ -63,11 +63,11 @@ export const Select = forwardRef<HTMLButtonElement, SelectProps>(
           <SelectPrimitive.Content
             side="bottom"
             position="popper"
-            className="w-[var(--radix-popper-anchor-width)] bg-black rounded border border-secondary-light-400 border-opacity-50"
+            className="w-[var(--radix-popper-anchor-width)] bg-black rounded border border-secondary-light-400 border-opacity-50 overflow-hidden"
           >
             <ScrollArea.Root type="auto">
               <SelectPrimitive.Viewport
-                className="w-full h-full max-h-64"
+                className="w-full h-full max-h-72"
                 asChild
               >
                 <ScrollArea.Viewport className="w-full h-full">
@@ -97,7 +97,7 @@ export const SelectItem = forwardRef<HTMLDivElement, SelectItemProps>(
     return (
       <SelectPrimitive.Item
         ref={forwardedRef}
-        className="px-2 py-1 select-none hover:bg-primary-blue focus:bg-primary-blue focus:outline-none"
+        className="px-2 select-none hover:bg-primary-blue focus:bg-primary-blue focus:outline-none"
         {...props}
       >
         <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
